@@ -8,9 +8,21 @@ import {
 } from 'recharts'
 import styles from './ParticipantHome.module.css'
 
-const METRICS = ['confidence', 'communication', 'emotionalRegulation']
-const COLORS = { confidence: '#2d6a4f', communication: '#40916c', emotionalRegulation: '#74c69d' }
-const LABELS = { confidence: 'Confidence', communication: 'Communication', emotionalRegulation: 'Emotional Reg.' }
+const METRICS = ['recoverySpeedAfterStress', 'healthySocialRisks', 'listeningWithoutFixing', 'prioritizeUnderPressure', 'recoveryAfterFallingBehind']
+const LABELS = {
+  recoverySpeedAfterStress: 'Recovery Speed',
+  healthySocialRisks: 'Healthy Social Risks',
+  listeningWithoutFixing: 'Listening',
+  prioritizeUnderPressure: 'Prioritize Under Pressure',
+  recoveryAfterFallingBehind: 'Recovery After Falling Behind',
+}
+const COLORS = {
+  recoverySpeedAfterStress: '#1b4332',
+  healthySocialRisks: '#2d6a4f',
+  listeningWithoutFixing: '#40916c',
+  prioritizeUnderPressure: '#74c69d',
+  recoveryAfterFallingBehind: '#b7e4c7',
+}
 
 export default function ParticipantHome() {
   const { user, profile } = useAuth()
