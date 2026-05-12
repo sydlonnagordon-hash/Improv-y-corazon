@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { collection, getDocs, addDoc, orderBy, query, serverTimestamp } from 'firebase/firestore'
+import { collection, getDocs, doc, setDoc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useNavigate } from 'react-router-dom'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts'
+import { SESSIONS } from '../sessions'
 import styles from './AdminDashboard.module.css'
 
 const METRICS = ['recoverySpeedAfterStress', 'healthySocialRisks', 'listeningWithoutFixing', 'prioritizeUnderPressure', 'recoveryAfterFallingBehind']
@@ -25,48 +26,47 @@ const COLORS = {
 
 export default function AdminDashboard() {
   const navigate = useNavigate()
-  const [sessions, setSessions] = useState([])
   const [users, setUsers] = useState([])
   const [ratings, setRatings] = useState([])
+  const [activeSessionId, setActiveSessionId] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [newSession, setNewSession] = useState('')
-  const [creating, setCreating] = useState(false)
+  const [saving, setSaving] = useState(false)
 
   const load = async () => {
-    const [sessSnap, userSnap, ratSnap] = await Promise.all([
-      getDocs(query(collection(db, 'sessions'), orderBy('date', 'desc'))),
+    await Promise.all(
+      SESSIONS.map((s) =>
+        setDoc(doc(db, 'sessions', s.id), { label: s.label, order: s.order }, { merge: true })
+      )
+    )
+    const [userSnap, ratSnap, configSnap] = await Promise.all([
       getDocs(collection(db, 'users')),
       getDocs(collection(db, 'ratings')),
+      getDoc(doc(db, 'config', 'settings')),
     ])
-    setSessions(sessSnap.docs.map((d) => ({ id: d.id, ...d.data() })))
     setUsers(userSnap.docs.map((d) => ({ id: d.id, ...d.data() })))
     setRatings(ratSnap.docs.map((d) => ({ id: d.id, ...d.data() })))
+    setActiveSessionId(configSnap.exists() ? configSnap.data().activeSessionId : null)
     setLoading(false)
   }
 
   useEffect(() => { load() }, [])
 
-  const createSession = async () => {
-    if (!newSession.trim()) return
-    setCreating(true)
-    await addDoc(collection(db, 'sessions'), {
-      label: newSession.trim(),
-      date: serverTimestamp(),
-    })
-    setNewSession('')
-    await load()
-    setCreating(false)
+  const setActive = async (sessionId) => {
+    setSaving(true)
+    await setDoc(doc(db, 'config', 'settings'), { activeSessionId: sessionId })
+    setActiveSessionId(sessionId)
+    setSaving(false)
   }
 
-  const aggregateBySession = sessions.map((s) => {
+  const aggregateBySession = SESSIONS.map((s) => {
     const postRatings = ratings.filter((r) => r.sessionId === s.id && r.timing === 'post')
-    const entry = { name: s.label, count: postRatings.length }
+    const entry = { name: s.label.split(': ')[0], count: postRatings.length }
     METRICS.forEach((m) => {
       const vals = postRatings.map((r) => r[m]).filter(Boolean)
       entry[m] = vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1) : null
     })
     return entry
-  }).reverse()
+  })
 
   const participants = users.filter((u) => u.role !== 'admin')
 
@@ -77,24 +77,29 @@ export default function AdminDashboard() {
       <h1>Admin Dashboard</h1>
 
       <div className="card">
-        <h2>Create session</h2>
-        <div className={styles.sessionCreate}>
-          <input
-            type="text"
-            value={newSession}
-            onChange={(e) => setNewSession(e.target.value)}
-            placeholder="Session name, e.g. Week 3"
-            onKeyDown={(e) => e.key === 'Enter' && createSession()}
-          />
-          <button className={`btn btn-secondary ${styles.createBtn}`} onClick={createSession} disabled={creating}>
-            {creating ? '…' : 'Add'}
-          </button>
+        <h2>Sessions</h2>
+        <div className={styles.sessionList}>
+          {SESSIONS.map((s) => (
+            <div key={s.id} className={`${styles.sessionRow} ${activeSessionId === s.id ? styles.sessionActive : ''}`}>
+              <div>
+                <strong>{s.label}</strong>
+                {activeSessionId === s.id && <span className={styles.activeBadge}>Active</span>}
+              </div>
+              <button
+                className={`btn btn-secondary ${styles.setActiveBtn}`}
+                onClick={() => setActive(s.id)}
+                disabled={saving || activeSessionId === s.id}
+              >
+                {activeSessionId === s.id ? 'Active' : 'Set Active'}
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="card">
         <h2>Average post-session scores</h2>
-        {aggregateBySession.length === 0
+        {aggregateBySession.every((e) => e.count === 0)
           ? <p className={styles.empty}>No session data yet.</p>
           : (
             <ResponsiveContainer width="100%" height={260}>

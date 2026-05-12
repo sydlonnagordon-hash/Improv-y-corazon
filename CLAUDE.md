@@ -19,6 +19,7 @@ A mobile-first progress tracking web app for Corazón Presence Method workshops.
   - Listening Without Fixing
   - Ability To Prioritize Under Pressure
   - Recovery After Falling Behind
+- Only the currently active session is shown for rating
 - Personal progress chart (line or bar chart showing before/after over time)
 - Read-only access to own data only
 
@@ -26,7 +27,15 @@ A mobile-first progress tracking web app for Corazón Presence Method workshops.
 - Login with admin role
 - Dashboard showing all participants' data
 - Per-participant breakdown and aggregate trends
-- Session management (create/label sessions)
+- Session management: set which of the 6 fixed sessions is currently active
+
+### Sessions (fixed, defined in src/sessions.js)
+- Week 1: The First Yes
+- Week 2: Pressure & Presence
+- Week 3: The Corazón Shift
+- Week 4: Noticing
+- Week 5: Settling
+- Week 6: Little Bird Moment
 
 ## Design Guidelines
 - Mobile-first, responsive
@@ -38,6 +47,7 @@ A mobile-first progress tracking web app for Corazón Presence Method workshops.
 - `users/{uid}` — profile + role (`participant` | `admin`)
 - `sessions/{sessionId}` — session metadata (date, title)
 - `ratings/{ratingId}` — `{ userId, sessionId, timing: "pre"|"post", recoverySpeedAfterStress, healthySocialRisks, listeningWithoutFixing, prioritizeUnderPressure, recoveryAfterFallingBehind, createdAt }`
+- `config/settings` — `{ activeSessionId }` — admin-controlled, readable by all authenticated users
 
 ## Key Constraints
 - Participants can only see their own data

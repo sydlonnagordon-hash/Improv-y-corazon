@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { collection, query, where, orderBy, getDocs } from 'firebase/firestore'
+import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts'
+import { SESSIONS } from '../sessions'
 import styles from './ParticipantHome.module.css'
 
 const METRICS = ['recoverySpeedAfterStress', 'healthySocialRisks', 'listeningWithoutFixing', 'prioritizeUnderPressure', 'recoveryAfterFallingBehind']
@@ -27,39 +28,37 @@ const COLORS = {
 export default function ParticipantHome() {
   const { user, profile } = useAuth()
   const navigate = useNavigate()
-  const [sessions, setSessions] = useState([])
   const [ratings, setRatings] = useState([])
+  const [activeSessionId, setActiveSessionId] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const load = async () => {
-      const [sessSnap, ratSnap] = await Promise.all([
-        getDocs(query(collection(db, 'sessions'), orderBy('date', 'asc'))),
+      const [ratSnap, configSnap] = await Promise.all([
         getDocs(query(collection(db, 'ratings'), where('userId', '==', user.uid))),
+        getDoc(doc(db, 'config', 'settings')),
       ])
-      setSessions(sessSnap.docs.map((d) => ({ id: d.id, ...d.data() })))
       setRatings(ratSnap.docs.map((d) => ({ id: d.id, ...d.data() })))
+      setActiveSessionId(configSnap.exists() ? configSnap.data().activeSessionId : null)
       setLoading(false)
     }
     load()
   }, [user.uid])
 
-  const chartData = sessions.map((s) => {
+  const activeSession = SESSIONS.find((s) => s.id === activeSessionId)
+  const preRated = activeSession && ratings.some((r) => r.sessionId === activeSession.id && r.timing === 'pre')
+  const postRated = activeSession && ratings.some((r) => r.sessionId === activeSession.id && r.timing === 'post')
+
+  const chartData = SESSIONS.map((s) => {
     const pre = ratings.find((r) => r.sessionId === s.id && r.timing === 'pre')
     const post = ratings.find((r) => r.sessionId === s.id && r.timing === 'post')
-    const entry = { name: s.label || s.id }
+    const entry = { name: s.label.split(': ')[0] }
     METRICS.forEach((m) => {
       if (pre) entry[`${m}_pre`] = pre[m]
       if (post) entry[`${m}_post`] = post[m]
     })
     return entry
-  })
-
-  const pendingSession = sessions.find((s) => {
-    const pre = ratings.find((r) => r.sessionId === s.id && r.timing === 'pre')
-    const post = ratings.find((r) => r.sessionId === s.id && r.timing === 'post')
-    return !pre || !post
-  })
+  }).filter((d) => Object.keys(d).length > 1)
 
   if (loading) return <div className="page"><p>Loading your progress…</p></div>
 
@@ -70,33 +69,38 @@ export default function ParticipantHome() {
         <p className={styles.sub}>Your Corazón Presence progress</p>
       </div>
 
-      {pendingSession && (
+      {activeSession ? (
         <div className={`card ${styles.cta}`}>
-          <p className={styles.ctaLabel}>Session ready</p>
-          <h2>{pendingSession.label}</h2>
-          <div className={styles.ctaBtns}>
-            {!ratings.find((r) => r.sessionId === pendingSession.id && r.timing === 'pre') && (
-              <button
-                className="btn btn-primary"
-                onClick={() => navigate(`/rate/${pendingSession.id}/pre`)}
-              >
+          <p className={styles.ctaLabel}>Current session</p>
+          <h2>{activeSession.label}</h2>
+          {!preRated && !postRated && (
+            <div className={styles.ctaBtns}>
+              <button className="btn btn-primary" onClick={() => navigate(`/rate/${activeSession.id}/pre`)}>
                 Rate before session
               </button>
-            )}
-            {ratings.find((r) => r.sessionId === pendingSession.id && r.timing === 'pre') &&
-              !ratings.find((r) => r.sessionId === pendingSession.id && r.timing === 'post') && (
-              <button
-                className="btn btn-primary"
-                onClick={() => navigate(`/rate/${pendingSession.id}/post`)}
-              >
+            </div>
+          )}
+          {preRated && !postRated && (
+            <div className={styles.ctaBtns}>
+              <p style={{ fontSize: '0.875rem', color: 'var(--gray-600)' }}>Before rating submitted ✓</p>
+              <button className="btn btn-primary" onClick={() => navigate(`/rate/${activeSession.id}/post`)}>
                 Rate after session
               </button>
-            )}
-          </div>
+            </div>
+          )}
+          {preRated && postRated && (
+            <p style={{ fontSize: '0.875rem', color: 'var(--green-base)', fontWeight: 600 }}>
+              Both ratings submitted ✓
+            </p>
+          )}
+        </div>
+      ) : (
+        <div className="card">
+          <p className={styles.empty}>No active session right now. Check back soon.</p>
         </div>
       )}
 
-      {chartData.length > 0 && chartData.some((d) => Object.keys(d).length > 1) ? (
+      {chartData.length > 0 ? (
         <div className="card">
           <h2>Your progress</h2>
           <ResponsiveContainer width="100%" height={300}>

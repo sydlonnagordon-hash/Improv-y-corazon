@@ -2,15 +2,45 @@
   padding-bottom: 40px;
 }
 
-.sessionCreate {
+.sessionList {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 12px;
 }
 
-.createBtn {
+.sessionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--gray-300);
+  gap: 12px;
+}
+
+.sessionActive {
+  border-color: var(--green-base);
+  background: var(--green-pale);
+}
+
+.activeBadge {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--green-dark);
+  background: var(--green-light);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.setActiveBtn {
   width: auto;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .table {
