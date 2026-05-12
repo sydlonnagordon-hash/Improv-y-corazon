@@ -1,0 +1,45 @@
+.nav {
+  background: var(--green-dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: var(--green-pale);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.link:hover { background: rgba(255,255,255,0.1); color: white; }
+
+.signout {
+  background: none;
+  border: 1.5px solid var(--green-light);
+  color: var(--green-pale);
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.signout:hover { background: rgba(255,255,255,0.1); }

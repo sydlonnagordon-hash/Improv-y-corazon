@@ -1,0 +1,19 @@
+.instruction {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray-300);
+}
+.metric:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}

@@ -1,0 +1,101 @@
+.page {
+  padding-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.back {
+  width: auto;
+  white-space: nowrap;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sub {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.legend {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin: 6px 0 12px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 12px;
+}
+
+.row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-300);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.row:last-child { border-bottom: none; }
+
+.sessionLabel {
+  color: var(--green-dark);
+  font-size: 0.95rem;
+}
+
+.timings {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.timing {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.missing {
+  opacity: 0.4;
+}
+
+.timingLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-600);
+}
+
+.timingMissing {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.scores {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.score {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.empty {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
