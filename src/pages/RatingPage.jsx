@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { doc, getDoc, collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
-import RatingForm from './RatingForm'
+import EmbodiedCheckin from './EmbodiedCheckin'
 
 export default function RatingPage() {
   const { sessionId, timing } = useParams()
@@ -37,7 +37,7 @@ export default function RatingPage() {
     <div className="page">
       <div className="card">
         <p style={{ color: 'var(--green-dark)', fontWeight: 600, marginBottom: 12 }}>
-          You already submitted your {timing === 'pre' ? 'before' : 'after'}-session rating for {session.label}.
+          You already submitted your {timing === 'pre' ? 'before' : 'after'}-session check-in for {session.label}.
         </p>
         <button className="btn btn-secondary" onClick={() => navigate('/')}>Back to home</button>
       </div>
@@ -45,7 +45,7 @@ export default function RatingPage() {
   )
 
   return (
-    <RatingForm
+    <EmbodiedCheckin
       timing={timing}
       sessionId={sessionId}
       sessionLabel={session.label}
