@@ -1,5 +1,5 @@
 :root {
-  --green-dark:   #1b4332;
+  --green-dark:   #2D5A27;
   --green-mid:    #2d6a4f;
   --green-base:   #40916c;
   --green-light:  #74c69d;
@@ -91,9 +91,13 @@ button {
   max-width: 900px;
 }
 
-h1 { font-size: 1.5rem; font-weight: 700; color: var(--green-dark); }
-h2 { font-size: 1.2rem; font-weight: 600; color: var(--green-dark); }
-h3 { font-size: 1rem; font-weight: 600; }
+h1 { font-size: 1.5rem; font-weight: 700; color: var(--green-dark); overflow-wrap: break-word; word-break: break-word; }
+h2 { font-size: 1.2rem; font-weight: 700; color: var(--green-dark); overflow-wrap: break-word; word-break: break-word; }
+h3 { font-size: 1rem; font-weight: 600; overflow-wrap: break-word; }
+
+@media (max-width: 480px) {
+  .card { padding: 16px; }
+}
 
 .label {
   font-size: 0.8rem;

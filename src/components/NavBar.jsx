@@ -17,12 +17,16 @@ export default function NavBar() {
 
   return (
     <nav className={styles.nav}>
-      <span className={styles.logo}>Corazón</span>
+      <div className={styles.logoGroup}>
+        <img src="/little-bird-logo.png" alt="Little Bird" className={styles.logoImg} />
+        <span className={styles.logo}>Improv y Corazón</span>
+      </div>
       <div className={styles.right}>
         {profile?.role === 'admin' && (
           <button className={styles.link} onClick={() => navigate('/admin')}>Admin</button>
         )}
-        <button className={styles.link} onClick={() => navigate('/')}>My Progress</button>
+        <button className={styles.link} onClick={() => navigate('/presence-board')}>🔥 Board</button>
+        <button className={styles.link} data-label="progress" onClick={() => navigate('/')}>My Progress</button>
         <button className={styles.signout} onClick={handleSignOut}>Sign out</button>
       </div>
     </nav>

@@ -1,0 +1,29 @@
+.pips {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pip {
+  flex: 1;
+  height: 44px;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  background: #fff;
+  color: var(--gray-700, #555);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.pip:hover {
+  border-color: #74c69d;
+  background: #f0faf4;
+}
+
+.pip.active {
+  background: #2D5A27;
+  border-color: #2D5A27;
+  color: #fff;
+}

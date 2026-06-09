@@ -1,0 +1,98 @@
+.card {
+  border-left: 4px solid #2D5A27;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2D5A27;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: -6px 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.promptBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.question {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  color: var(--gray-900);
+  box-sizing: border-box;
+}
+.textarea:focus { border-color: var(--green-base); }
+.textarea::placeholder { color: var(--gray-600); }
+
+.savedEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-300);
+}
+.savedEntry:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.savedQuestion {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2D5A27;
+  margin: 0;
+}
+
+.savedAnswer {
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  line-height: 1.55;
+  font-style: italic;
+  margin: 0;
+}
+
+.savedNote {
+  font-size: 0.95rem;
+  color: var(--gray-900);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.savedBadge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green-base);
+}

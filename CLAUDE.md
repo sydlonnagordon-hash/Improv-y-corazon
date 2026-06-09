@@ -13,12 +13,13 @@ A mobile-first progress tracking web app for Corazón Presence Method workshops.
 
 ### Participant View
 - Login (Firebase Auth — email/password or magic link)
-- Pre/post session rating form: rate 1–5 on the 5 Core Mentor Capacities:
-  - Recovery Speed After Stress
-  - Ability To Take Healthy Social Risks
-  - Listening Without Fixing
-  - Ability To Prioritize Under Pressure
-  - Recovery After Falling Behind
+- Pre/post session rating form: rate 1–5 on the 6 Core Metrics:
+  - Stress Load — how much pressure you felt
+  - Energy Direction — where your energy and attention were focused
+  - Authentic Communication — how close your words were to what you actually meant
+  - Recovery Speed — how quickly you returned after stress, conflict, or shutdown
+  - Improvisational Thinking — how flexibly you responded when plans changed
+  - Initiative — how quickly you took useful action without overthinking
 - Only the currently active session is shown for rating
 - Personal progress chart (line or bar chart showing before/after over time)
 - Read-only access to own data only
@@ -46,7 +47,7 @@ A mobile-first progress tracking web app for Corazón Presence Method workshops.
 ## Data Model (Firestore)
 - `users/{uid}` — profile + role (`participant` | `admin`)
 - `sessions/{sessionId}` — session metadata (date, title)
-- `ratings/{ratingId}` — `{ userId, sessionId, timing: "pre"|"post", recoverySpeedAfterStress, healthySocialRisks, listeningWithoutFixing, prioritizeUnderPressure, recoveryAfterFallingBehind, createdAt }`
+- `ratings/{ratingId}` — `{ userId, sessionId, timing: "pre"|"post", stressLoad, energyDirection, authenticCommunication, recoverySpeed, improvisationalThinking, initiative, createdAt }`
 - `config/settings` — `{ activeSessionId }` — admin-controlled, readable by all authenticated users
 
 ## Key Constraints

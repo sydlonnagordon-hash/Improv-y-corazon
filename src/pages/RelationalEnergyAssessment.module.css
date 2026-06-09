@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trademark {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2D5A27;
+}
+
+.introBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: #f4f9f4;
+  border-left: 3px solid #74c69d;
+  border-radius: 8px;
+}
+
+.introText {
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.introFooter {
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 6px;
+  border-top: 1px solid #d8f3dc;
+}
+
+.instruction {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-top: 2px;
+}
+
+.progressBar {
+  height: 6px;
+  background: var(--gray-300);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #2D5A27;
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+
+.progressLabel {
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  text-align: right;
+}
+
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prompt {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.5;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  border: 1.5px solid var(--gray-300);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--white);
+}
+
+.optionMost {
+  border-color: #2D5A27;
+  background: #f4f9f4;
+}
+
+.optionLeast {
+  border-color: var(--gray-600);
+  background: var(--gray-100);
+}
+
+.optionText {
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.optionBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.selectBtn {
+  flex: 1;
+  padding: 7px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.selectBtn:hover { border-color: #2D5A27; color: #2D5A27; }
+
+.selectBtnMost {
+  background: #2D5A27;
+  border-color: #2D5A27;
+  color: var(--white);
+}
+.selectBtnMost:hover { background: #2D5A27; color: var(--white); }
+
+.selectBtnLeast {
+  background: var(--gray-600);
+  border-color: var(--gray-600);
+  color: var(--white);
+}
+.selectBtnLeast:hover { background: var(--gray-600); color: var(--white); }
+
+.nav {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,152 @@
+.card {
+  border-left: 4px solid #74c69d;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cardTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #2D5A27;
+  margin-bottom: 16px;
+}
+
+/* Steps */
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.stepBordered {
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.stepSci {
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Word chips */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chip {
+  padding: 6px 13px;
+  border-radius: 20px;
+  border: 1.5px solid var(--gray-300);
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray-900);
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.chip:hover {
+  border-color: #2D5A27;
+  color: #2D5A27;
+}
+
+.chipSelected {
+  background: #2D5A27;
+  border-color: #2D5A27;
+  color: #fff;
+}
+
+.customInput {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--gray-900);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.customInput:focus {
+  border-color: #2D5A27;
+}
+
+/* Submit */
+
+.submitBtn {
+  background: #2D5A27;
+  border-radius: 14px;
+  padding: 14px 24px;
+  margin-top: 20px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #1e3d1b;
+}
+
+/* Submitted state */
+
+.submittedPair {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.submittedBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.submittedLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-600);
+}
+
+.submittedWord {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2D5A27;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.affirmation {
+  padding: 14px 16px;
+  background: #f0f7f0;
+  border-left: 3px solid #74c69d;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.affirmationText {
+  font-size: 0.925rem;
+  font-style: italic;
+  color: #2D5A27;
+  line-height: 1.65;
+}
+
+.submittedNote {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+}

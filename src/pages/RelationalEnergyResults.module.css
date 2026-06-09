@@ -1,0 +1,135 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sub {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2D5A27;
+  margin-bottom: 0;
+}
+
+.sectionSub {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin-top: -6px;
+  line-height: 1.5;
+}
+
+.energyCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.energyCardPrimary {
+  border-left: 4px solid #2D5A27;
+}
+
+.energyCardSecondary {
+  border-left: 4px solid var(--gray-300);
+}
+
+.energyHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.energyEmoji {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.energyName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.energyTagline {
+  font-size: 0.78rem;
+  color: #2D5A27;
+  font-weight: 600;
+  margin: 2px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.energyScore {
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2D5A27;
+  flex-shrink: 0;
+}
+
+.energyCardSecondary .energyScore {
+  color: var(--gray-600);
+}
+
+.energyDesc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.insightCard {
+  background: #f0faf4;
+  border: 1.5px solid #74c69d;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insightLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2D5A27;
+  margin: 0;
+}
+
+.insightTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1b4332;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.insightBody {
+  font-size: 0.9rem;
+  color: #2d4a2a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.insightEdge {
+  font-size: 0.875rem;
+  color: #2D5A27;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid #b7e4c7;
+}

@@ -2,6 +2,112 @@
   padding-bottom: 40px;
 }
 
+.exportDesc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: 12px;
+}
+
+.leaderTableWrap {
+  margin-top: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+}
+
+.leaderTable {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.leaderHeader {
+  display: grid;
+  grid-template-columns: 48px 1fr 72px 90px;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--gray-100);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-600);
+  align-items: center;
+}
+
+.leaderRow {
+  display: grid;
+  grid-template-columns: 48px 1fr 72px 90px;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--gray-300);
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.leaderRankCol {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.leaderNameCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.leaderPtsCol {
+  font-weight: 700;
+  color: #2D5A27;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.leaderPctCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.pctBar {
+  width: 64px;
+  height: 5px;
+  background: var(--gray-300);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.pctFill {
+  display: block;
+  height: 100%;
+  background: #2D5A27;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.exportBtns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.exportBtn {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.exportNote {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin-top: 10px;
+  font-style: italic;
+}
+
 .sessionList {
   display: flex;
   flex-direction: column;
@@ -95,4 +201,114 @@
   color: var(--gray-600);
   font-size: 0.9rem;
   padding: 8px 0;
+}
+
+.baselineBadge {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.energyBadge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2D5A27;
+  background: #f4f9f4;
+  border: 1px solid #2D5A27;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.checkinSession {
+  margin-top: 16px;
+}
+.checkinSession + .checkinSession {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.checkinSessionName {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #2D5A27;
+  margin: 0 0 8px;
+}
+
+.checkinGrid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.82rem;
+}
+
+.checkinGridHeader {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px;
+  gap: 4px;
+  padding: 7px 12px;
+  background: var(--gray-100);
+  font-weight: 700;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.checkinGridRow {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px;
+  gap: 4px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--gray-300);
+  color: var(--gray-900);
+  align-items: center;
+}
+
+.checkinMetricName {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.chartLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.chartLegendItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.chartLegendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+  background: #2D5A27;
+}
+
+.chartLegendLabel {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2D5A27;
+}
+
+.chartLegendDesc {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  margin-top: 1px;
 }

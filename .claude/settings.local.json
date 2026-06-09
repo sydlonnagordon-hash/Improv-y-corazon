@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(firebase *)"
+      "Bash(firebase *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

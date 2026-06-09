@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 4px solid #2D5A27;
+}
+
+/* Intro */
+
+.intro {
+  padding: 4px 0 2px;
+}
+
+.introText {
+  font-size: 0.975rem;
+  color: var(--gray-900);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Section */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.sectionLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2D5A27;
+}
+
+/* Practices */
+
+.practice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--gray-100);
+  border-radius: 8px;
+}
+
+.practiceIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.practiceName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.practiceDesc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Reflection prompts */
+
+.reflectionNote {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+.promptBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.promptText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.5;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--gray-900);
+  background: #fff;
+  outline: none;
+  resize: vertical;
+  line-height: 1.6;
+  transition: border-color 0.15s;
+}
+.textarea:focus {
+  border-color: #2D5A27;
+}
+
+.saveBtn {
+  background: #2D5A27;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+.saveBtn:hover:not(:disabled) {
+  background: #1e3d1b;
+}
