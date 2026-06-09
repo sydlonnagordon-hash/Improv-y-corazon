@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "improvycorazon-5ff8b"
+  },
+  "targets": {
+    "improvycorazon-5ff8b": {
+      "hosting": {
+        "marketing": [
+          "improvycorazon-marketing"
+        ]
+      }
+    }
+  }
+}
