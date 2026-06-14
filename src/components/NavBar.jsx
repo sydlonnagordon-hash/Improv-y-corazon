@@ -1,34 +1,48 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
+
+const links = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/method', label: 'The Method' },
+  { to: '/programs', label: 'Programs' },
+  { to: '/contact', label: 'Contact' },
+]
 
 export default function NavBar() {
   const [open, setOpen] = useState(false)
-  const { pathname } = useLocation()
 
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.logo} onClick={() => setOpen(false)}>
+        <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
           <img src="/logo.png" alt="Improv y Corazón" className={styles.logoImg} />
-          <span className={styles.logoText}>Improv y Corazón</span>
-        </Link>
+        </NavLink>
 
         <button
           className={styles.hamburger}
-          onClick={() => setOpen(o => !o)}
-          aria-label="Toggle menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          onClick={() => setOpen(o => !o)}
         >
-          <span className={open ? styles.barTop + ' ' + styles.barTopOpen : styles.barTop} />
-          <span className={open ? styles.barMid + ' ' + styles.barMidOpen : styles.barMid} />
-          <span className={open ? styles.barBot + ' ' + styles.barBotOpen : styles.barBot} />
+          <span className={`${styles.bar} ${open ? styles.barTopOpen : ''}`} />
+          <span className={`${styles.bar} ${open ? styles.barMidOpen : ''}`} />
+          <span className={`${styles.bar} ${open ? styles.barBotOpen : ''}`} />
         </button>
 
-        <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
-          <Link to="/" className={pathname === '/' ? styles.active : ''} onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/about" className={pathname === '/about' ? styles.active : ''} onClick={() => setOpen(false)}>About</Link>
-          <Link to="/contact" className={pathname === '/contact' ? styles.active : ''} onClick={() => setOpen(false)}>Contact</Link>
+        <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`} role="navigation">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </NavLink>
+          ))}
           <a
             href="https://calendly.com/improvycorazon/30min"
             target="_blank"

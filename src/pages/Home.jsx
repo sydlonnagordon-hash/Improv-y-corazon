@@ -1,133 +1,129 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 
-const services = [
-  {
-    title: 'Leadership Presence Workshops',
-    desc: 'Intensive group sessions using improvisation as a mirror — revealing how leaders actually show up under pressure, and building the muscle to shift it in real time.',
-  },
-  {
-    title: 'The Corazón Presence Method',
-    desc: 'A six-session framework tracking six core capacities: stress load, energy direction, authentic communication, recovery speed, improvisational thinking, and initiative.',
-  },
-  {
-    title: 'Facilitator-Led Team Experiences',
-    desc: 'Custom engagements designed around your team\'s culture, goals, and growth edges. We meet people where they are — and help them go further.',
-  },
-]
-
-const metrics = [
-  'Recovery Speed After Stress',
-  'Authentic Communication',
-  'Improvisational Thinking',
-  'Energy Direction',
-  'Initiative Under Pressure',
-  'Presence in Relationship',
-]
-
 export default function Home() {
   return (
     <div className={styles.page}>
 
-      {/* Hero */}
+      {/* ── HERO — black ── */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.eyebrow}>Leadership Development · Tampa Bay & Beyond</p>
-          <h1 className={styles.headline}>
-            Your leaders are showing up.<br />
-            But are they really <em>present?</em>
+          <img src="/logo.png" alt="Improv y Corazón" className={styles.heroLogo} />
+          <h1 className={styles.heroHeadline}>
+            Your leaders know what to do.<br />
+            So why does pressure change everything?
           </h1>
-          <p className={styles.subhead}>
-            Improv y Corazón uses the power of improvisation to close the gap between
-            showing up and truly being there — building leaders who are responsive,
-            grounded, and fully alive in the room.
-          </p>
-          <div className={styles.heroCtas}>
-            <a
-              href="https://calendly.com/improvycorazon/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.btnPrimary}
-            >
-              Book a Free Discovery Call
-            </a>
-            <Link to="/about" className={styles.btnSecondary}>Learn Our Approach</Link>
-          </div>
-        </div>
-        <div className={styles.heroAccent} aria-hidden="true" />
-      </section>
-
-      {/* What We Do */}
-      <section className={styles.whatWeDo}>
-        <div className={styles.sectionInner}>
-          <p className={styles.sectionLabel}>What We Do</p>
-          <h2 className={styles.sectionHeading}>
-            Presence isn't a personality trait.<br />It's a practice.
-          </h2>
-          <p className={styles.sectionBody}>
-            Most leadership training teaches people what to do. We teach people
-            how to <em>be</em> — under pressure, in conflict, in the unknown. Through
-            structured improvisation and reflective practice, leaders develop the
-            internal capacities that drive real performance.
-          </p>
-          <div className={styles.metrics}>
-            {metrics.map(m => (
-              <div key={m} className={styles.metricPill}>{m}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className={styles.services}>
-        <div className={styles.sectionInner}>
-          <p className={styles.sectionLabel}>Services</p>
-          <h2 className={styles.sectionHeading}>How we work together</h2>
-          <div className={styles.serviceGrid}>
-            {services.map((s, i) => (
-              <div key={i} className={styles.serviceCard}>
-                <span className={styles.serviceNum}>0{i + 1}</span>
-                <h3 className={styles.serviceTitle}>{s.title}</h3>
-                <p className={styles.serviceDesc}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Teaser */}
-      <section className={styles.aboutTeaser}>
-        <div className={styles.sectionInner + ' ' + styles.aboutTeaserInner}>
-          <div className={styles.aboutText}>
-            <p className={styles.sectionLabel}>About</p>
-            <h2 className={styles.sectionHeading}>Founded on presence. Built for leaders.</h2>
-            <p className={styles.sectionBody}>
-              Improv y Corazón was founded by Sydllonna Burks — facilitator, coach, and
-              practitioner of the Corazón Presence Method. Her work lives at the intersection
-              of embodied learning, improvisation, and organizational development.
-            </p>
-            <Link to="/about" className={styles.btnOutline}>Meet Sydllonna →</Link>
-          </div>
-          <div className={styles.aboutAccent}>
-            <img src="/logo.png" alt="" className={styles.aboutLogo} />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className={styles.cta}>
-        <div className={styles.ctaInner}>
-          <h2 className={styles.ctaHeading}>Ready to develop leaders who are truly present?</h2>
-          <p className={styles.ctaBody}>
-            Let's talk about what your team needs. A 30-minute conversation is the first step.
+          <p className={styles.heroSub}>
+            Improv y Corazón helps organizations develop leaders who stay connected,
+            authentic, and effective — even when the stakes are highest.
           </p>
           <a
             href="https://calendly.com/improvycorazon/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.btnPrimary}
+            className={styles.btnRed}
           >
-            Schedule Your Discovery Call
+            Book a Discovery Call
+          </a>
+        </div>
+      </section>
+
+      {/* ── PROBLEM — cream ── */}
+      <section className={styles.problem}>
+        <div className={styles.sectionInner}>
+          <p className={styles.problemStatement}>
+            You've invested in training. Your team has attended the workshops.
+            They know the frameworks.
+          </p>
+          <p className={styles.problemBridge}>
+            But when a student pushes back, a conversation gets hard,
+            or pressure rises — the skills disappear.
+          </p>
+          <p className={styles.problemRed}>
+            That's not a knowledge problem. That's a presence problem.
+          </p>
+        </div>
+      </section>
+
+      {/* ── DIFFERENTIATOR — black ── */}
+      <section className={styles.differentiator}>
+        <div className={styles.sectionInner}>
+          <div className={styles.diffGrid}>
+            <div className={styles.diffItem}>
+              <span className={styles.diffMark}>—</span>
+              <p className={styles.diffText}>We don't teach communication. We remove what blocks it.</p>
+            </div>
+            <div className={styles.diffItem}>
+              <span className={styles.diffMark}>—</span>
+              <p className={styles.diffText}>We don't build confidence. We reveal the beliefs undermining it.</p>
+            </div>
+            <div className={styles.diffItem}>
+              <span className={styles.diffMark}>—</span>
+              <p className={styles.diffText}>We don't improve leadership. We train presence under pressure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHO WE SERVE — cream ── */}
+      <section className={styles.serve}>
+        <div className={styles.sectionInner}>
+          <p className={styles.serveEyebrow}>Who We Serve</p>
+          <h2 className={styles.serveHeadline}>Built for organizations that develop people.</h2>
+          <div className={styles.serveGrid}>
+            {[
+              { icon: '◆', label: 'Youth Mentor Organizations' },
+              { icon: '◆', label: 'Workforce Readiness Programs' },
+              { icon: '◆', label: 'Schools & Educator Development Teams' },
+              { icon: '◆', label: 'Nonprofit Leadership Teams' },
+            ].map(({ icon, label }) => (
+              <div key={label} className={styles.serveCard}>
+                <span className={styles.serveIcon}>{icon}</span>
+                <p className={styles.serveLabel}>{label}</p>
+              </div>
+            ))}
+          </div>
+          <Link to="/programs" className={styles.btnOutlineBlack}>See Our Programs →</Link>
+        </div>
+      </section>
+
+      {/* ── COMING SOON — black ── */}
+      <section className={styles.pilot}>
+        <div className={styles.sectionInner}>
+          <p className={styles.pilotEyebrow}>Results Coming Summer 2026</p>
+          <h2 className={styles.pilotHeadline}>
+            From our Elevate Tampa Bay pilot.
+          </h2>
+          <div className={styles.pilotGrid}>
+            <div className={styles.pilotBox}>
+              <p className={styles.pilotBoxLabel}>Participant Testimonials</p>
+              <p className={styles.pilotBoxNote}>Coming Summer 2026</p>
+            </div>
+            <div className={styles.pilotBox}>
+              <p className={styles.pilotBoxLabel}>Program Video</p>
+              <p className={styles.pilotBoxNote}>Coming Summer 2026</p>
+            </div>
+            <div className={styles.pilotBox}>
+              <p className={styles.pilotBoxLabel}>Impact Statistics</p>
+              <p className={styles.pilotBoxNote}>Coming Summer 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA — red ── */}
+      <section className={styles.cta}>
+        <div className={styles.ctaInner}>
+          <h2 className={styles.ctaHeadline}>
+            Ready to see what your leaders are capable of?
+          </h2>
+          <a
+            href="https://calendly.com/improvycorazon/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnWhite}
+          >
+            Book a Discovery Call
           </a>
         </div>
       </section>

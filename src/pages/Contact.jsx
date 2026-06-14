@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './Contact.module.css'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', org: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', org: '', interest: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
   function handleChange(e) {
@@ -11,81 +11,185 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    const mailto = `mailto:improvycorazon@gmail.com?subject=Inquiry from ${encodeURIComponent(form.name)} (${encodeURIComponent(form.org || 'no org')})&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}`)}`
-    window.location.href = mailto
     setSubmitted(true)
   }
 
   return (
     <div className={styles.page}>
 
+      {/* ── HERO — black ── */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.eyebrow}>Contact</p>
-          <h1 className={styles.headline}>Let's start a conversation.</h1>
-          <p className={styles.subhead}>
-            Whether you're curious about the Corazón Presence Method, exploring options
-            for your team, or ready to book — we'd love to hear from you.
+          <p className={styles.eyebrow}>Let's Talk</p>
+          <h1 className={styles.heroHeadline}>
+            Start with a<br />conversation.
+          </h1>
+          <p className={styles.heroSub}>
+            Every engagement starts with a free 30-minute discovery call.
+            No pitch deck. Just a real conversation about your team and what they need.
           </p>
+          <a
+            href="https://calendly.com/improvycorazon/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnRed}
+          >
+            Book a Discovery Call on Calendly
+          </a>
         </div>
       </section>
 
-      <section className={styles.body}>
-        <div className={styles.bodyInner}>
+      {/* ── FORM + INFO — cream ── */}
+      <section className={styles.formSection}>
+        <div className={styles.formInner}>
 
-          <div className={styles.formWrap}>
-            <h2 className={styles.formHeading}>Send a message</h2>
+          <div className={styles.infoCol}>
+            <p className={styles.infoEyebrow}>Or send a message</p>
+            <h2 className={styles.infoHeadline}>We'd love to hear from you.</h2>
+            <p className={styles.infoBody}>
+              Have questions before booking? Want to share more about your
+              organization first? Use the form and Sydllonna will respond within 2 business days.
+            </p>
+
+            <div className={styles.infoCards}>
+              <div className={styles.infoCard}>
+                <p className={styles.infoCardLabel}>Email</p>
+                <a href="mailto:sydlonna.gordon@gmail.com" className={styles.infoCardValue}>
+                  sydlonna.gordon@gmail.com
+                </a>
+              </div>
+              <div className={styles.infoCard}>
+                <p className={styles.infoCardLabel}>Based In</p>
+                <p className={styles.infoCardValue}>Tampa Bay, FL · Available Nationwide</p>
+              </div>
+              <div className={styles.infoCard}>
+                <p className={styles.infoCardLabel}>Scheduling</p>
+                <a
+                  href="https://calendly.com/improvycorazon/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.infoCardValue}
+                >
+                  Book via Calendly →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.formCol}>
             {submitted ? (
-              <div className={styles.successMsg}>
-                <p>Your email client should have opened. If not, you can reach us directly at <strong>improvycorazon@gmail.com</strong>.</p>
+              <div className={styles.successBox}>
+                <p className={styles.successHeadline}>Message received.</p>
+                <p className={styles.successBody}>
+                  Thank you for reaching out. Sydllonna will be in touch within 2 business days.
+                  In the meantime, feel free to book a discovery call directly on Calendly.
+                </p>
+                <a
+                  href="https://calendly.com/improvycorazon/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.btnRedSmall}
+                >
+                  Book a Call
+                </a>
               </div>
             ) : (
-              <form className={styles.form} onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className={styles.form} noValidate>
                 <div className={styles.fieldRow}>
                   <div className={styles.field}>
-                    <label htmlFor="name">Name *</label>
-                    <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} placeholder="Your name" />
+                    <label className={styles.label} htmlFor="name">Your Name *</label>
+                    <input
+                      className={styles.input}
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Jane Smith"
+                    />
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="email">Email *</label>
-                    <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} placeholder="your@email.com" />
+                    <label className={styles.label} htmlFor="email">Email *</label>
+                    <input
+                      className={styles.input}
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="jane@yourorg.org"
+                    />
                   </div>
                 </div>
                 <div className={styles.field}>
-                  <label htmlFor="org">Organization</label>
-                  <input id="org" name="org" type="text" value={form.org} onChange={handleChange} placeholder="Company or organization (optional)" />
+                  <label className={styles.label} htmlFor="org">Organization</label>
+                  <input
+                    className={styles.input}
+                    id="org"
+                    name="org"
+                    type="text"
+                    value={form.org}
+                    onChange={handleChange}
+                    placeholder="Organization or Program Name"
+                  />
                 </div>
                 <div className={styles.field}>
-                  <label htmlFor="message">Message *</label>
-                  <textarea id="message" name="message" required rows={6} value={form.message} onChange={handleChange} placeholder="Tell us about your team, what you're looking for, or just say hello." />
+                  <label className={styles.label} htmlFor="interest">What are you interested in?</label>
+                  <select
+                    className={styles.input}
+                    id="interest"
+                    name="interest"
+                    value={form.interest}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select an option</option>
+                    <option value="flagship">The Corazón Presence Method (9-Week)</option>
+                    <option value="workshop">Presence Under Pressure Workshop</option>
+                    <option value="coaching">1:1 Leadership Coaching</option>
+                    <option value="youth">Elevate: Youth Mentor Edition</option>
+                    <option value="other">Something Else / Not Sure Yet</option>
+                  </select>
                 </div>
-                <button type="submit" className={styles.submitBtn}>Send Message</button>
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="message">Tell us about your team *</label>
+                  <textarea
+                    className={`${styles.input} ${styles.textarea}`}
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="What's the challenge you're navigating? What would change if your leaders showed up differently?"
+                  />
+                </div>
+                <button type="submit" className={styles.btnSubmit}>
+                  Send Message
+                </button>
               </form>
             )}
           </div>
 
-          <div className={styles.sidebar}>
-            <div className={styles.sideCard}>
-              <p className={styles.sideLabel}>Prefer to schedule directly?</p>
-              <h3 className={styles.sideHeading}>Book a Free 30-Minute Discovery Call</h3>
-              <p className={styles.sideBody}>No pressure, no pitch. Just a conversation about your team and whether we might be a good fit.</p>
-              <a
-                href="https://calendly.com/improvycorazon/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.calendlyBtn}
-              >
-                View Availability on Calendly
-              </a>
-            </div>
+        </div>
+      </section>
 
-            <div className={styles.sideInfo}>
-              <p className={styles.sideLabel}>Based in</p>
-              <p className={styles.sideDetail}>Tampa Bay, Florida</p>
-              <p className={styles.sideDetail}>Available nationally and virtually</p>
-            </div>
-          </div>
-
+      {/* ── FINAL CTA — black ── */}
+      <section className={styles.finalCta}>
+        <div className={styles.finalCtaInner}>
+          <p className={styles.finalCtaEyebrow}>The fastest path forward</p>
+          <h2 className={styles.finalCtaHeadline}>
+            30 minutes.<br />No pressure. Real conversation.
+          </h2>
+          <a
+            href="https://calendly.com/improvycorazon/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnRed}
+          >
+            Book Your Discovery Call
+          </a>
         </div>
       </section>
 

@@ -1,0 +1,339 @@
+/* ── HERO ── */
+.hero {
+  background: var(--black);
+  padding: 100px 24px 120px;
+  text-align: center;
+}
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.heroHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.06;
+}
+.heroSub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.65);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+/* ── WHAT IT IS ── */
+.what {
+  background: var(--cream);
+  color: var(--black);
+  padding: 100px 24px;
+}
+.whatInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.whatEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+.whatHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.12;
+  margin-bottom: 48px;
+}
+.whatCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.whatBody {
+  font-size: 1.05rem;
+  color: rgba(10,10,10,0.72);
+  line-height: 1.8;
+}
+
+/* ── 4 ENERGIES ── */
+.energies {
+  background: var(--black);
+  padding: 100px 24px;
+}
+.energiesInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.energiesEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+.energiesHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.energiesSub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 600px;
+  margin: 0 auto 56px;
+  line-height: 1.7;
+}
+.energyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+.energyCard {
+  background: #141414;
+  padding: 48px 40px;
+  text-align: left;
+  border-top: 4px solid transparent;
+}
+.accent_red { border-top-color: var(--red); }
+.accent_green { border-top-color: var(--green); }
+.accent_white { border-top-color: rgba(255,255,255,0.18); }
+
+.energyName {
+  font-family: var(--font-headline);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.energyDesc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+}
+
+/* ── PHASES ── */
+.phases {
+  background: var(--cream);
+  color: var(--black);
+  padding: 100px 24px;
+}
+.phasesInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.phasesEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+.phasesHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: 64px;
+}
+.phaseList {
+  display: flex;
+  flex-direction: column;
+}
+.phaseItem {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 48px;
+  padding: 56px 0;
+  border-bottom: 1px solid rgba(10,10,10,0.12);
+}
+.phaseItem:first-child { border-top: 1px solid rgba(10,10,10,0.12); }
+
+.phaseLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.phaseNum {
+  font-family: var(--font-headline);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.phaseName {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+.phaseDuration {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(10,10,10,0.4);
+}
+.phaseDesc {
+  font-size: 1rem;
+  color: rgba(10,10,10,0.72);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+.phaseBullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.phaseBullets li {
+  font-size: 0.9rem;
+  color: rgba(10,10,10,0.6);
+  padding-left: 20px;
+  position: relative;
+}
+.phaseBullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ── OUTCOMES ── */
+.outcomes {
+  background: var(--black);
+  padding: 100px 24px;
+}
+.outcomesInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.outcomesEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+.outcomesHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 56px;
+}
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+.outcomeItem {
+  background: #141414;
+  padding: 32px 28px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+.outcomeCheck {
+  color: var(--green);
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── CTA ── */
+.cta {
+  background: var(--red);
+  padding: 100px 24px;
+  text-align: center;
+}
+.ctaInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+.ctaHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+}
+.ctaBtns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btnWhite {
+  display: inline-block;
+  background: var(--white);
+  color: var(--red);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border: 2px solid var(--white);
+  transition: background 0.2s, color 0.2s;
+}
+.btnWhite:hover { background: transparent; color: var(--white); }
+.btnOutline {
+  display: inline-block;
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btnOutline:hover { border-color: var(--white); color: var(--white); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .whatCols { grid-template-columns: 1fr; gap: 24px; }
+  .energyGrid { grid-template-columns: 1fr; }
+  .phaseItem { grid-template-columns: 1fr; gap: 24px; }
+  .outcomeGrid { grid-template-columns: 1fr; }
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,12 +7,14 @@
 }
 
 :root {
+  --black: #0A0A0A;
   --cream: #FAF7F2;
-  --black: #1A1A1A;
   --red: #C0392B;
+  --red-dark: #a93226;
   --green: #2D5A27;
-  --gray: #6B6B6B;
-  --light-gray: #E8E4DD;
+  --white: #FFFFFF;
+  --font-headline: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 }
 
 html {
@@ -19,11 +23,17 @@ html {
 }
 
 body {
-  background-color: var(--cream);
-  color: var(--black);
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--black);
+  color: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -31,18 +41,12 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 button {
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-body);
 }
 
-h1, h2, h3 {
-  font-family: Georgia, 'Times New Roman', serif;
-  line-height: 1.15;
-  color: var(--black);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  line-height: 1.12;
 }
