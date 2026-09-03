@@ -2,15 +2,15 @@
   position: sticky;
   top: 0;
   z-index: 200;
-  background: var(--black);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--cream);
+  border-bottom: 1px solid rgba(44,36,32,0.1);
 }
 
 .inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 84px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,52 +22,52 @@
 }
 
 .logoImg {
-  height: 60px;
+  height: 56px;
   width: auto;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .link {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(44,36,32,0.48);
   transition: color 0.2s;
 }
 
 .link:hover,
 .link.active {
-  color: var(--white);
+  color: var(--ink);
 }
 
 .bookLink {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--green);
-  border: 1px solid var(--green);
+  color: var(--red);
+  border: 1px solid var(--red);
   padding: 8px 18px;
   transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
 .bookLink:hover,
 .bookLinkActive {
-  background: var(--green);
+  background: var(--red);
   color: var(--white) !important;
 }
 
 .bookBtn {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -97,7 +97,7 @@
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--white);
+  background: var(--ink);
   transition: transform 0.25s, opacity 0.25s;
 }
 
@@ -111,11 +111,11 @@
   .nav {
     display: none;
     position: absolute;
-    top: 84px;
+    top: 80px;
     left: 0;
     right: 0;
-    background: var(--black);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: var(--cream);
+    border-bottom: 1px solid rgba(44,36,32,0.08);
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -126,19 +126,20 @@
 
   .link {
     padding: 16px 28px;
-    font-size: 0.95rem;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(44,36,32,0.06);
+    color: rgba(44,36,32,0.55);
   }
 
   .bookLink {
     margin: 8px 28px 0;
     text-align: center;
     display: block;
-    border: 1px solid var(--green);
+    border: 1px solid var(--red);
   }
 
   .bookBtn {
-    margin: 16px 28px 0;
+    margin: 12px 28px 0;
     text-align: center;
     display: block;
   }

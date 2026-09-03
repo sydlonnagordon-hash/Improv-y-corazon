@@ -8,10 +8,10 @@ export default function Footer() {
         <div className={styles.brand}>
           <img src="/logo.png" alt="Improv y Corazón" className={styles.logo} />
           <p className={styles.tagline}>
-            Presence is not a personality trait.<br />It's a practice.
+            Stop Rehearsing. Start Responding.
           </p>
-          <p className={styles.founderTitle}>
-            Founder, Improv y Corazón · Creator of the Corazón Presence Method™ · Relational Presence Under Pressure for Leaders
+          <p className={styles.founderNote}>
+            Founded by Sydlonna Burks · Tampa Bay &amp; Beyond
           </p>
           <a
             href="https://calendly.com/improvycorazon/30min"
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <p>© {new Date().getFullYear()} Improv y Corazón · Founded by Sydllonna Burks · Tampa Bay & Beyond</p>
+        <p>© {new Date().getFullYear()} Improv y Corazón · All Rights Reserved</p>
       </div>
     </footer>
   )

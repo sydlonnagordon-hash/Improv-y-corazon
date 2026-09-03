@@ -16,9 +16,9 @@
 
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--red);
 }
@@ -26,22 +26,22 @@
 .heroHeadline {
   font-family: var(--font-headline);
   font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 700;
   color: var(--white);
   line-height: 1.08;
 }
 
 .heroSub {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 580px;
-  line-height: 1.7;
+  color: rgba(253,250,246,0.55);
+  max-width: 560px;
+  line-height: 1.75;
 }
 
 /* ── STORY ── */
 .story {
   background: var(--cream);
-  color: var(--black);
+  color: var(--ink);
   padding: 100px 24px;
 }
 
@@ -49,7 +49,7 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: 80px;
   align-items: start;
 }
@@ -62,8 +62,8 @@
 .headshotPlaceholder {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: #E0D9D0;
-  border: 2px dashed #B8B0A5;
+  background: var(--paper-mid);
+  border: 2px dashed rgba(44,36,32,0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,44 +72,46 @@
 
 .headshotNote {
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: #8A8178;
+  font-size: 0.82rem;
+  color: rgba(44,36,32,0.38);
   line-height: 1.6;
-}
-
-.storyTitle {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: rgba(10, 10, 10, 0.5);
-  letter-spacing: 0.03em;
-  line-height: 1.6;
-  margin-bottom: 20px;
 }
 
 .storyEyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--red);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.storyQuote {
+  font-family: var(--font-headline);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.3;
+  border-left: 4px solid var(--red);
+  padding-left: 24px;
+  margin-bottom: 32px;
 }
 
 .storyHeadline {
   font-family: var(--font-headline);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 900;
-  color: var(--black);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  color: var(--ink);
   line-height: 1.15;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .storyBody {
   font-size: 1.05rem;
-  color: rgba(10, 10, 10, 0.75);
-  line-height: 1.8;
+  color: rgba(44,36,32,0.72);
+  line-height: 1.85;
   margin-bottom: 20px;
 }
 
@@ -117,6 +119,7 @@
 .philosophy {
   background: var(--black);
   padding: 100px 24px;
+  border-top: 3px solid var(--red);
 }
 
 .philInner {
@@ -127,18 +130,18 @@
 
 .philEyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--red);
   margin-bottom: 32px;
 }
 
 .philQuote {
   font-family: var(--font-headline);
   font-size: clamp(2rem, 5vw, 3.6rem);
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
   color: var(--white);
   line-height: 1.15;
@@ -147,43 +150,45 @@
 }
 
 .philBody {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.75;
-  max-width: 680px;
+  font-size: 1.05rem;
+  color: rgba(253,250,246,0.55);
+  line-height: 1.82;
+  max-width: 660px;
   margin: 0 auto 64px;
 }
 
 .philPillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  gap: 2px;
   text-align: left;
 }
 
 .philCard {
-  background: #141414;
+  background: #1A1310;
   padding: 40px 32px;
+  border-top: 2px solid var(--red);
 }
 
 .philCardTitle {
   font-family: var(--font-headline);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
   color: var(--white);
   margin-bottom: 16px;
 }
 
 .philCardBody {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.7;
+  font-size: 0.92rem;
+  color: rgba(253,250,246,0.5);
+  line-height: 1.75;
 }
 
 /* ── WHY ── */
 .why {
   background: var(--cream);
-  color: var(--black);
+  color: var(--ink);
   padding: 100px 24px;
 }
 
@@ -194,9 +199,9 @@
 
 .whyEyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--red);
   margin-bottom: 24px;
@@ -205,16 +210,16 @@
 .whyHeadline {
   font-family: var(--font-headline);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 900;
-  color: var(--black);
+  font-weight: 700;
+  color: var(--ink);
   line-height: 1.15;
   margin-bottom: 32px;
 }
 
 .whyBody {
   font-size: 1.05rem;
-  color: rgba(10, 10, 10, 0.72);
-  line-height: 1.8;
+  color: rgba(44,36,32,0.7);
+  line-height: 1.85;
 }
 
 /* ── CTA ── */
@@ -236,7 +241,8 @@
 .ctaHeadline {
   font-family: var(--font-headline);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 900;
+  font-weight: 700;
+  font-style: italic;
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 16px;
@@ -247,11 +253,11 @@
   background: var(--white);
   color: var(--red);
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 20px 48px;
+  padding: 18px 44px;
   border: 2px solid var(--white);
   transition: background 0.2s, color 0.2s;
 }
@@ -260,14 +266,14 @@
 .btnOutline {
   display: inline-block;
   background: transparent;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(253,250,246,0.72);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 14px 32px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(253,250,246,0.3);
   transition: border-color 0.2s, color 0.2s;
 }
 .btnOutline:hover { border-color: var(--white); color: var(--white); }
@@ -278,7 +284,7 @@
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .headshotBox { position: static; max-width: 340px; }
+  .headshotBox { position: static; max-width: 320px; }
   .headshotPlaceholder { aspect-ratio: 4 / 3; }
   .philPillars { grid-template-columns: 1fr; }
 }

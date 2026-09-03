@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,14 +7,17 @@
 }
 
 :root {
-  --black: #0A0A0A;
-  --cream: #FAF7F2;
-  --red: #C0392B;
-  --red-dark: #a93226;
-  --green: #2D5A27;
-  --white: #FFFFFF;
-  --font-headline: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --ink:       #2C2420;
+  --cream:     #F0EBE0;
+  --paper-mid: #E6DFCF;
+  --red:       #8B1A1A;
+  --red-mid:   #A52020;
+  --red-dark:  #6B1212;
+  --black:     #120E0C;
+  --white:     #FDFAF6;
+  --green:     #5C7A4A;
+  --font-headline: 'Cormorant Garamond', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
 }
 
 html {
@@ -24,8 +27,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--cream);
+  color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }

@@ -5,10 +5,10 @@ export default function About() {
   return (
     <div className={styles.page}>
 
-      {/* ── HERO — black ── */}
+      {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.eyebrow}>The Person Behind the Method</p>
+          <p className={styles.eyebrow}>The Person Behind the Work</p>
           <h1 className={styles.heroHeadline}>
             This work didn't start<br />
             <em>in a boardroom.</em>
@@ -20,7 +20,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── STORY — cream ── */}
+      {/* ── STORY ── */}
       <section className={styles.story}>
         <div className={styles.storyInner}>
           <div className={styles.headshotBox}>
@@ -29,13 +29,16 @@ export default function About() {
             </div>
           </div>
           <div className={styles.storyText}>
-            <p className={styles.storyEyebrow}>Sydllonna Burks</p>
-            <p className={styles.storyTitle}>
-              Founder, Improv y Corazón&nbsp;&nbsp;·&nbsp;&nbsp;Creator of the Corazón Presence Method™&nbsp;&nbsp;·&nbsp;&nbsp;Relational Presence Under Pressure for Leaders
-            </p>
-            <h2 className={styles.storyHeadline}>Theatre educator turned presence trainer.</h2>
+            <p className={styles.storyEyebrow}>Sydlonna Burks</p>
+            <blockquote className={styles.storyQuote}>
+              "I spent years teaching people to take risks before realizing
+              I was going to have to take one myself."
+            </blockquote>
+            <h2 className={styles.storyHeadline}>
+              Theatre educator. Presence trainer. Recovering perfectionist.
+            </h2>
             <p className={styles.storyBody}>
-              Sydllonna spent years in classrooms and on stages — watching talented,
+              Sydlonna spent years in classrooms and on stages — watching talented,
               caring people freeze, disconnect, or perform a version of themselves
               when things got hard. The training they'd received taught them what to do.
               Nobody had taught them how to stay.
@@ -48,14 +51,15 @@ export default function About() {
             </p>
             <p className={styles.storyBody}>
               Today she works with youth mentor organizations, nonprofit teams, and
-              workforce readiness programs across Tampa Bay and beyond — bringing a
-              method that is equal parts rigorous and deeply human.
+              workforce readiness programs across Tampa Bay and beyond. And she wrote
+              <em> Becoming the Fool</em> because she needed to say some things out loud
+              that the workshops couldn't hold.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── PHILOSOPHY — black ── */}
+      {/* ── PHILOSOPHY ── */}
       <section className={styles.philosophy}>
         <div className={styles.philInner}>
           <p className={styles.philEyebrow}>The Foundation</p>
@@ -83,24 +87,23 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── WHY IT WORKS — cream ── */}
+      {/* ── WHY IT WORKS ── */}
       <section className={styles.why}>
         <div className={styles.whyInner}>
           <p className={styles.whyEyebrow}>Why It Works</p>
           <h2 className={styles.whyHeadline}>
-            Most training targets knowledge.<br />We target the nervous system.
+            Most training targets knowledge.<br />We train the capacity to use it.
           </h2>
           <p className={styles.whyBody}>
-            When pressure rises, the brain reverts to survival — not to
-            workshop notes. That's why knowledge-only training fails under
-            stress. The Corazón Presence Method trains the body and the
-            relational field alongside the mind, so your leaders have
-            access to their full capability exactly when it matters most.
+            When pressure rises, the brain reverts to survival — not to workshop notes.
+            That's why knowledge-only training fails under stress. The Corazón Presence
+            Method trains the body and the relational field alongside the mind, so your
+            leaders have access to their full capability exactly when it matters most.
           </p>
         </div>
       </section>
 
-      {/* ── CTA — red ── */}
+      {/* ── CTA ── */}
       <section className={styles.cta}>
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaHeadline}>
