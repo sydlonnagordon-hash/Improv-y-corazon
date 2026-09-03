@@ -1,0 +1,212 @@
+/* ── HERO ── */
+.hero {
+  background: var(--black);
+  padding: 100px 24px 120px;
+  text-align: center;
+}
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.heroHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.06;
+  font-style: italic;
+}
+.heroSub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ── ABOUT THE BOOK ── */
+.about {
+  background: var(--cream);
+  color: var(--black);
+  padding: 100px 24px;
+}
+.aboutInner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.sectionEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 24px;
+}
+.aboutHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+.aboutBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+}
+.aboutBody p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(10,10,10,0.72);
+}
+
+/* ── BUY ── */
+.buy {
+  background: var(--green);
+  color: var(--white);
+  padding: 100px 24px;
+}
+.buyInner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.buyEyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+.buyHeadline {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.buyDesc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  margin-bottom: 48px;
+}
+
+/* ── BUY CARD ── */
+.buyCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 32px 40px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.buyCardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.buyCardTitle {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--white);
+}
+.buyCardFormat {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.buyBtn {
+  display: inline-block;
+  background: var(--white);
+  color: var(--green);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 18px 44px;
+  border: 2px solid var(--white);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.buyBtn:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+/* ── SHIPPING NOTE ── */
+.shippingNote {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 28px;
+}
+.shippingNote strong {
+  color: var(--white);
+}
+
+/* ── CLOSING ── */
+.closing {
+  background: var(--black);
+  padding: 100px 24px;
+  text-align: center;
+}
+.closingInner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.closingQuote {
+  font-family: var(--font-headline);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+.closingAttrib {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .buyCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+  .buyBtn { width: 100%; text-align: center; }
+}

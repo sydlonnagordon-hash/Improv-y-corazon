@@ -6,6 +6,7 @@ import About from './pages/About'
 import Method from './pages/Method'
 import Programs from './pages/Programs'
 import Contact from './pages/Contact'
+import Book from './pages/Book'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/method" element={<Method />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/book" element={<Book />} />
         </Routes>
       </main>
       <Footer />

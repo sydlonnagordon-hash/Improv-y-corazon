@@ -10,6 +10,9 @@ export default function Footer() {
           <p className={styles.tagline}>
             Presence is not a personality trait.<br />It's a practice.
           </p>
+          <p className={styles.founderTitle}>
+            Founder, Improv y Corazón · Creator of the Corazón Presence Method™ · Relational Presence Under Pressure for Leaders
+          </p>
           <a
             href="https://calendly.com/improvycorazon/30min"
             target="_blank"
@@ -27,6 +30,7 @@ export default function Footer() {
             <Link to="/method">The Method</Link>
             <Link to="/programs">Programs</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/book">Buy the Book</Link>
           </nav>
         </div>
         <div className={styles.linksBlock}>

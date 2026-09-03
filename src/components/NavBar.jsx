@@ -8,6 +8,7 @@ const links = [
   { to: '/method', label: 'The Method' },
   { to: '/programs', label: 'Programs' },
   { to: '/contact', label: 'Contact' },
+  { to: '/book', label: 'Buy the Book', highlight: true },
 ]
 
 export default function NavBar() {
@@ -32,12 +33,16 @@ export default function NavBar() {
         </button>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`} role="navigation">
-          {links.map(({ to, label }) => (
+          {links.map(({ to, label, highlight }) => (
             <NavLink
               key={to}
               to={to}
               end={to === '/'}
-              className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+              className={({ isActive }) =>
+                highlight
+                  ? `${styles.bookLink} ${isActive ? styles.bookLinkActive : ''}`
+                  : `${styles.link} ${isActive ? styles.active : ''}`
+              }
               onClick={() => setOpen(false)}
             >
               {label}

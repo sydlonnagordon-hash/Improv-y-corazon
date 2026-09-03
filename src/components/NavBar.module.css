@@ -47,6 +47,24 @@
   color: var(--white);
 }
 
+.bookLink {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 8px 18px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.bookLink:hover,
+.bookLinkActive {
+  background: var(--green);
+  color: var(--white) !important;
+}
+
 .bookBtn {
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -110,6 +128,13 @@
     padding: 16px 28px;
     font-size: 0.95rem;
     border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .bookLink {
+    margin: 8px 28px 0;
+    text-align: center;
+    display: block;
+    border: 1px solid var(--green);
   }
 
   .bookBtn {

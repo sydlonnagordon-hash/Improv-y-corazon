@@ -25,6 +25,16 @@
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 14px;
+}
+
+.founderTitle {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.02em;
+  line-height: 1.65;
   margin-bottom: 28px;
 }
 

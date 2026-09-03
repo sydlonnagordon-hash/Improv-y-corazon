@@ -77,6 +77,16 @@
   line-height: 1.6;
 }
 
+.storyTitle {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(10, 10, 10, 0.5);
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
 .storyEyebrow {
   font-family: var(--font-body);
   font-size: 0.75rem;

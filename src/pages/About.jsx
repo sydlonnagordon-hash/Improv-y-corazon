@@ -30,6 +30,9 @@ export default function About() {
           </div>
           <div className={styles.storyText}>
             <p className={styles.storyEyebrow}>Sydllonna Burks</p>
+            <p className={styles.storyTitle}>
+              Founder, Improv y Corazón&nbsp;&nbsp;·&nbsp;&nbsp;Creator of the Corazón Presence Method™&nbsp;&nbsp;·&nbsp;&nbsp;Relational Presence Under Pressure for Leaders
+            </p>
             <h2 className={styles.storyHeadline}>Theatre educator turned presence trainer.</h2>
             <p className={styles.storyBody}>
               Sydllonna spent years in classrooms and on stages — watching talented,
