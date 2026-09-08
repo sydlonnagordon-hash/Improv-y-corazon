@@ -114,7 +114,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. FOR ORGANIZATIONAL BUYERS ── */}
+      {/* ── 4. HEART-BASED LEADERSHIP ── */}
+      <section className={styles.heart}>
+        <div className={styles.heartInner}>
+          <p className={styles.sectionEyebrow}>The Deeper Current</p>
+          <h2 className={styles.heartHeadline}>Heart-Based Leadership</h2>
+          <p className={styles.heartBody}>
+            Beneath every framework, every exercise, every moment of genuine connection
+            in a room — there is something harder to name. A quality of attention.
+            A willingness to be affected.
+          </p>
+          <p className={styles.heartBody}>
+            We call it heart-based leadership not as a metaphor for warmth, but as a
+            description of where true presence actually lives. Leading from a place of
+            genuine emotional availability, coherence, and attunement to the people in
+            front of you — rather than performing the authority you think they need to see.
+          </p>
+          <blockquote className={styles.heartQuote}>
+            Lead from the heart.<br />
+            Notice the room.<br />
+            Respond to what is actually there.
+          </blockquote>
+          <p className={styles.heartBody}>
+            Research from the HeartMath Institute offers one lens for understanding why
+            this matters: the heart generates an electromagnetic field that extends beyond
+            the body and shifts measurably with our internal states. We hold this as a
+            compelling metaphor — and a question worth sitting with — not as a claim that
+            improvisation itself has been scientifically proven to produce these effects.
+            The science is theirs. The application is ours.
+          </p>
+          <p className={styles.heartSource}>
+            Source:{' '}
+            <a
+              href="https://www.heartmath.org/research/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.heartSourceLink}
+            >
+              HeartMath Institute, <em>The Energetic Heart</em>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* ── 5. FOR ORGANIZATIONAL BUYERS ── */}
       <section className={styles.orgs}>
         <div className={styles.orgsInner}>
           <p className={styles.sectionEyebrow}>For Organizations</p>
@@ -154,7 +197,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. ABOUT SYDLONNA ── */}
+      {/* ── 6. ABOUT SYDLONNA ── */}
       <section className={styles.about}>
         <div className={styles.aboutInner}>
           <p className={styles.aboutEyebrow}>The Person Behind This</p>
@@ -174,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. NEWSLETTER ── */}
+      {/* ── 7. NEWSLETTER ── */}
       <section className={styles.newsletter}>
         <div className={styles.newsletterInner}>
           <p className={styles.newsletterEyebrow}>Stay in the Experiment</p>
