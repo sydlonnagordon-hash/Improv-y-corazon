@@ -32,8 +32,8 @@ export default function Home() {
         <div className={styles.heroInner}>
           <p className={styles.heroTagline}>Stop Rehearsing. Start Responding.</p>
           <h1 className={styles.heroHeadline}>
-            Stop rehearsing<br />
-            the perfect classroom.
+            Is your staff performing leadership,<br />
+            or practicing it?
           </h1>
           <p className={styles.heroSub}>
             Learn to respond to the one you actually have.
@@ -146,7 +146,7 @@ export default function Home() {
           <p className={styles.heartSource}>
             Source:{' '}
             <a
-              href="https://www.heartmath.org/research/"
+              href="https://www.heartmath.org/resources/downloads/energetic-heart/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heartSourceLink}
