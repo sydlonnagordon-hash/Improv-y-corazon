@@ -75,8 +75,8 @@ export default function Method() {
             The Corazón<br />Presence Method™
           </h1>
           <p className={styles.heroSub}>
-            A structured, embodied approach to developing leaders who remain
-            connected, effective, and authentically themselves — even under pressure.
+            A presence framework built for workforce programs and the teams who lead them
+            — designed to change not just what your staff know, but how they show up.
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function Method() {
           </h2>
           <div className={styles.whatCols}>
             <p className={styles.whatBody}>
-              The Corazón Presence Method is a 9-week framework that uses structured
+              The Corazón Presence Method is a 6-week framework that uses structured
               improvisation, somatic awareness, and relational coaching to develop the
               internal capacities that drive leadership effectiveness.
             </p>
@@ -156,7 +156,7 @@ export default function Method() {
       <section className={styles.outcomes}>
         <div className={styles.outcomesInner}>
           <p className={styles.outcomesEyebrow}>What Changes</p>
-          <h2 className={styles.outcomesHeadline}>What participants walk away with</h2>
+          <h2 className={styles.outcomesHeadline}>What participants gain</h2>
           <div className={styles.outcomeGrid}>
             {[
               'Increased recovery speed after stressful interactions',

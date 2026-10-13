@@ -21,12 +21,13 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 19px;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-body);
+  font-size: 1rem;
   background-color: var(--cream);
   color: var(--ink);
   line-height: 1.6;

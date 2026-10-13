@@ -1,256 +1,179 @@
 import { Link } from 'react-router-dom'
-import styles from './Home.module.css'
 
-const principles = [
-  {
-    title: 'Yes, And',
-    body: "Not agreement — acknowledgment. You can't respond to what you refuse to receive. The most powerful thing you can do in any room is actually be in it.",
-  },
-  {
-    title: 'Presence Over Performance',
-    body: "The goal isn't looking good. It's actually being here. There's a difference between playing a role and inhabiting one — and everyone in the room can feel it.",
-  },
-  {
-    title: 'Uncertainty as Practice',
-    body: "The fool doesn't know. That's the whole point. The capacity to stay curious — rather than certain — is the foundation of every other leadership skill.",
-  },
+const writtenTestimonials = [
+  { name: "Jaraux Washington", role: "Elevate Tampa Bay Participant", quote: "I've never had a training like this before. It made me realize how much I hold back at work. I felt safe enough to be honest about it." },
+  { name: "Tamera", role: "Elevate Tampa Bay Participant", quote: "The Improv activities were fun, but I didn't expect them to be so revealing. I saw myself react in ways I didn't even know I did." },
+  { name: "Rhonda", role: "Mentor Participant", quote: "I've been in leadership for years and I've never had a training that made me look at my own patterns the way this did." },
+  { name: "Emari", role: "Elevate Tampa Bay Participant", quote: "I usually shut down when things get uncomfortable. This helped me see that. And for the first time, I tried something different." },
+  { name: "Willie Washington", role: "Elevate Tampa Bay Participant", quote: "I didn't think a professional training could feel this personal. But it did. And I think that's the point." },
+  { name: "Brian", role: "Elevate Tampa Bay Participant", quote: "I showed up thinking it was just a workshop. I left thinking about how I show up in my relationships. That shift surprised me." },
 ]
 
-const offerings = [
-  { label: 'The Book as a Team Read', desc: 'Staff read Becoming the Fool together — we facilitate the conversation.' },
-  { label: 'Presence Workshops', desc: 'Structured improv-based sessions for teams who want to practice, not just study.' },
-  { label: '1:1 Leadership Coaching', desc: 'For leaders navigating a specific challenge, transition, or stuck place.' },
-  { label: 'Custom Program Design', desc: "Built around your team's culture, goals, and the room you're actually in." },
+const videoTestimonials = [
+  { name: "Brian", youtubeId: "GgkdW74WBas" },
+  { name: "Jaraux Washington", youtubeId: "Pg6MnJECJow" },
+  { name: "Seraiah", youtubeId: "ZqNP7GiwGDw" },
 ]
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-
-      {/* ── 1. HERO ── */}
-      <section className={styles.hero}>
-        <div className={styles.heroInner}>
-          <p className={styles.heroTagline}>Stop Rehearsing. Start Responding.</p>
-          <h1 className={styles.heroHeadline}>
-            Is your staff performing leadership,<br />
-            or practicing it?
-          </h1>
-          <p className={styles.heroSub}>
-            Learn to respond to the one you actually have.
-          </p>
-          <div className={styles.heroCtas}>
-            <Link to="/book" className={styles.btnRedSolid}>
-              Get the Book
-            </Link>
-            <a
-              href="https://calendly.com/improvycorazon/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.btnOutlineLight}
-            >
-              Bring It To Your Organization
-            </a>
-          </div>
+    <>
+      {/* HERO */}
+      <section style={{ minHeight: '92vh', background: '#0A0A0A', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 24px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: '#C0392B' }} />
+        <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 28 }}>
+          6-Week Presence Training for Mission-Driven Organizations
         </div>
+        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 6vw, 76px)', fontWeight: 900, color: '#FAF7F2', lineHeight: 1.1, maxWidth: 900, marginBottom: 32, letterSpacing: '-0.02em' }}>
+          Your training, guaranteed to land.
+        </h1>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(17px, 2vw, 20px)', fontWeight: 300, color: 'rgba(253,250,246,0.65)', maxWidth: 700, lineHeight: 1.7, marginBottom: 24 }}>
+          Improv y Corazón helps workforce programs make sure their staff actually learn and use what they're taught. Through improv-based, hands-on training, every participant improves from their before-training quiz to their after-training quiz and demonstrates the skill in a live role-play, or we come back for a free follow-up session.
+        </p>
+        <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(16px, 1.8vw, 19px)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(253,250,246,0.45)', maxWidth: 580, lineHeight: 1.6, marginBottom: 52 }}>
+          Culture starts at the top. We help the people who lead it.
+        </p>
+        <a href="https://calendly.com/improvycorazon/30min" target="_blank" rel="noopener noreferrer" style={{ background: '#C0392B', color: '#FAF7F2', padding: '18px 44px', fontFamily: "'Inter', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
+          Book a Free Call
+        </a>
       </section>
 
-      {/* ── 2. BECOMING THE FOOL ── */}
-      <section className={styles.book}>
-        <div className={styles.bookInner}>
-          <div className={styles.bookText}>
-            <p className={styles.sectionEyebrow}>The Book</p>
-            <h2 className={styles.bookHeadline}>
-              <em>Becoming the Fool</em>
-            </h2>
-            <p className={styles.bookBody}>
-              Improv y Corazón began as a set of questions: what if the most important
-              thing we could give a leader isn't a framework — but a practice of showing up?
-            </p>
-            <p className={styles.bookBody}>
-              <em>Becoming the Fool</em> is where those questions landed. It's not a
-              business book. It's not a self-help manual. It's an invitation to stop
-              performing the version of yourself you've been rehearsing — and to meet
-              what's actually in the room.
-            </p>
-            <p className={styles.bookBody}>
-              This is the philosophical foundation of everything we do. Start here.
-            </p>
-            <Link to="/book" className={styles.btnRedOutline}>
-              Read More &amp; Buy the Book →
-            </Link>
-          </div>
-          <div className={styles.bookVisual}>
-            <div className={styles.bookCover}>
-              <p className={styles.bookCoverTitle}>Becoming<br />the Fool</p>
-              <p className={styles.bookCoverAuthor}>Sydlonna Burks</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3. CORE PHILOSOPHY ── */}
-      <section className={styles.philosophy}>
-        <div className={styles.philInner}>
-          <div className={styles.philQuoteWrap}>
-            <span className={styles.philRule} aria-hidden="true" />
-            <blockquote className={styles.philQuote}>
-              Improvisation isn't about being funny.<br />
-              It's about being available.
-            </blockquote>
-          </div>
-          <p className={styles.philSub}>
-            We spend too much of our lives rehearsing who we think we should be
-            instead of responding to what is actually happening. The practice of
-            improvisation — real improvisation — is learning to close that gap.
-          </p>
-          <div className={styles.philPrinciples}>
-            {principles.map(({ title, body }) => (
-              <div key={title} className={styles.philCard}>
-                <h3 className={styles.philCardTitle}>{title}</h3>
-                <p className={styles.philCardBody}>{body}</p>
+      {/* WHAT WE DO */}
+      <section style={{ background: '#FAF7F2', padding: '100px 24px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 20, textAlign: 'center' }}>The Problem We Solve</div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, color: '#0A0A0A', textAlign: 'center', maxWidth: 700, margin: '0 auto 24px', lineHeight: 1.15 }}>Most trainings teach skills.<br />We reveal the beliefs beneath them.</h2>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 19, color: '#444', textAlign: 'center', maxWidth: 600, margin: '0 auto 72px', lineHeight: 1.6 }}>Organizations buy communication training because they think they have a communication problem. What they actually have is a presence problem.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
+            {[
+              { number: '01', title: 'Self-Awareness', desc: "Staff learn to recognize their own patterns under pressure — before those patterns damage relationships and derail the work." },
+              { number: '02', title: 'Emotional Regulation', desc: 'Your team stays present and functional during hard conversations instead of shutting down, blowing up, or checking out.' },
+              { number: '03', title: 'Authentic Communication', desc: "Staff say what's actually true — to each other, to leadership, to the people they serve." },
+              { number: '04', title: 'Culture Shift', desc: "When individuals change how they show up, the culture changes with them. That's the guarantee." },
+            ].map((item) => (
+              <div key={item.number} style={{ background: '#0A0A0A', padding: '48px 36px', color: '#FAF7F2' }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 48, fontWeight: 900, color: '#1A1A1A', lineHeight: 1, marginBottom: 20 }}>{item.number}</div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#FAF7F2', marginBottom: 14 }}>{item.title}</h3>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6 }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 4. HEART-BASED LEADERSHIP ── */}
-      <section className={styles.heart}>
-        <div className={styles.heartInner}>
-          <p className={styles.sectionEyebrow}>The Deeper Current</p>
-          <h2 className={styles.heartHeadline}>Heart-Based Leadership</h2>
-          <p className={styles.heartBody}>
-            Beneath every framework, every exercise, every moment of genuine connection
-            in a room — there is something harder to name. A quality of attention.
-            A willingness to be affected.
-          </p>
-          <p className={styles.heartBody}>
-            We call it heart-based leadership not as a metaphor for warmth, but as a
-            description of where true presence actually lives. Leading from a place of
-            genuine emotional availability, coherence, and attunement to the people in
-            front of you — rather than performing the authority you think they need to see.
-          </p>
-          <blockquote className={styles.heartQuote}>
-            Lead from the heart.<br />
-            Notice the room.<br />
-            Respond to what is actually there.
-          </blockquote>
-          <p className={styles.heartBody}>
-            Research from the HeartMath Institute offers one lens for understanding why
-            this matters: the heart generates an electromagnetic field that extends beyond
-            the body and shifts measurably with our internal states. We hold this as a
-            compelling metaphor — and a question worth sitting with — not as a claim that
-            improvisation itself has been scientifically proven to produce these effects.
-            The science is theirs. The application is ours.
-          </p>
-          <p className={styles.heartSource}>
-            Source:{' '}
-            <a
-              href="https://www.heartmath.org/resources/downloads/energetic-heart/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.heartSourceLink}
-            >
-              HeartMath Institute, <em>The Energetic Heart</em>
-            </a>
-          </p>
+      {/* THE QUESTION */}
+      <section style={{ background: '#C0392B', padding: '100px 24px', textAlign: 'center' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 52px)', fontStyle: 'italic', fontWeight: 400, color: '#FAF7F2', lineHeight: 1.3, marginBottom: 32 }}>"“Who do you become when pressure arrives?”"</p>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 19, color: 'rgba(250,247,242,0.75)', lineHeight: 1.6 }}>That is the question beneath all Improv y Corazón work. Not who you are when things are easy — who you are when they are not.</p>
         </div>
       </section>
 
-      {/* ── 5. FOR ORGANIZATIONAL BUYERS ── */}
-      <section className={styles.orgs}>
-        <div className={styles.orgsInner}>
-          <p className={styles.sectionEyebrow}>For Organizations</p>
-          <h2 className={styles.orgsHeadline}>
-            Your team already knows what to do.<br />
-            So why does pressure change everything?
-          </h2>
-          <p className={styles.orgsBody}>
-            When things get hard — a student escalates, a meeting derails, a leader
-            freezes under scrutiny — the problem isn't knowledge. It's the ability
-            to stay present when it's uncomfortable.
-          </p>
-          <p className={styles.orgsBody}>
-            We work with nonprofits, schools, youth mentor organizations, and workforce
-            readiness programs that invest in their people and want that investment to
-            actually hold under pressure.
-          </p>
-          <div className={styles.orgsOffers}>
-            {offerings.map(({ label, desc }) => (
-              <div key={label} className={styles.orgOffer}>
-                <span className={styles.orgOfferMark} aria-hidden="true">—</span>
-                <div>
-                  <p className={styles.orgOfferLabel}>{label}</p>
-                  <p className={styles.orgOfferDesc}>{desc}</p>
+      {/* WHO WE SERVE */}
+      <section style={{ background: '#0A0A0A', padding: '100px 24px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 20, textAlign: 'center' }}>Who We Serve</div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 3.5vw, 48px)', fontWeight: 700, color: '#FAF7F2', textAlign: 'center', marginBottom: 64 }}>Built for leaders who are done losing good people</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 32 }}>
+            {[
+              { title: 'Executive Directors', desc: "You've built something meaningful. But if your staff can't communicate under pressure, the mission leaks. We help you build a culture worth staying in." },
+              { title: 'HR Directors', desc: "Retention isn't a recruiting problem — it's a culture problem. We give you a proven 6-week intervention that addresses the root, not the symptom." },
+              { title: 'Program Managers', desc: "You're responsible for outcomes but can't control how your team shows up. We change that — by changing how your people show up to themselves first." },
+              { title: 'Frontline Staff & Teams', desc: "The people doing the hardest work deserve the most support. We bring this work directly to the people your mission depends on." },
+            ].map((item) => (
+              <div key={item.title} style={{ borderTop: '2px solid #C0392B', paddingTop: 28 }}>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#FAF7F2', marginBottom: 14 }}>{item.title}</h3>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OFFERS */}
+      <section style={{ background: '#FAF7F2', padding: '100px 24px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 20, textAlign: 'center' }}>What We Offer</div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 3.5vw, 48px)', fontWeight: 700, color: '#0A0A0A', textAlign: 'center', marginBottom: 64 }}>Choose your entry point</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 2 }}>
+            {/* Flagship card */}
+            <div style={{ background: '#0A0A0A', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ background: '#C0392B', textAlign: 'center', padding: '10px 16px', fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FAF7F2' }}>
+                ★ Flagship Program
+              </div>
+              <div style={{ padding: '40px 36px 48px', flex: 1 }}>
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 14 }}>6 Weeks · Cohort-Based</div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: '#FAF7F2', marginBottom: 16, lineHeight: 1.2 }}>The Corazón Presence Method™</h3>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6 }}>Our full framework — three phases, six weeks, and a complete transformation in how your team members show up. Designed for organizations ready to invest in lasting change.</p>
+              </div>
+            </div>
+            {/* Workshop card */}
+            <div style={{ background: '#141414', padding: '40px 36px 48px' }}>
+              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#555', marginBottom: 14 }}>Half or Full Day · On-Site</div>
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: '#FAF7F2', marginBottom: 16, lineHeight: 1.2 }}>Presence Under Pressure</h3>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6 }}>An intensive, immersive experience using structured improvisation to reveal how participants actually show up when things get hard — and giving them tools to shift it in real time.</p>
+            </div>
+            {/* Coaching card */}
+            <div style={{ background: '#141414', padding: '40px 36px 48px' }}>
+              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#555', marginBottom: 14 }}>Ongoing · Virtual or In-Person</div>
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: '#FAF7F2', marginBottom: 16, lineHeight: 1.2 }}>Relational Leadership Coaching</h3>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6 }}>Individual coaching sessions grounded in the Corazón framework. Ideal for executive directors, team leads, and high-potential leaders navigating a specific challenge or transition.</p>
+            </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 48 }}>
+            <Link to="/programs" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C0392B', textDecoration: 'none', borderBottom: '1px solid #C0392B', paddingBottom: 3 }}>See All Programs →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO TESTIMONIALS */}
+      <section style={{ background: '#FAF7F2', padding: '100px 24px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 20, textAlign: 'center' }}>Hear It From Them</div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 3.5vw, 48px)', fontWeight: 700, color: '#0A0A0A', textAlign: 'center', marginBottom: 64 }}>Real words from real participants</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 40, maxWidth: 900, margin: '0 auto 80px' }}>
+            {videoTestimonials.map((v) => (
+              <div key={v.name} style={{ background: '#0A0A0A', overflow: 'hidden' }}>
+                {v.youtubeId ? (
+                  <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                      title={`${v.name} testimonial`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                    />
+                  </div>
+                ) : null}
+                <div style={{ padding: '12px 16px', fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 600, color: '#FAF7F2', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{v.name}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
+            {writtenTestimonials.map((t) => (
+              <div key={t.name} style={{ background: '#0A0A0A', padding: '36px 32px' }}>
+                <div style={{ fontSize: 40, color: '#C0392B', fontFamily: "'Playfair Display', serif", lineHeight: 1, marginBottom: 16 }}>“</div>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontStyle: 'italic', color: '#FAF7F2', lineHeight: 1.6, marginBottom: 24 }}>{t.quote}</p>
+                <div style={{ borderTop: '1px solid #222', paddingTop: 16 }}>
+                  <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 600, color: '#FAF7F2', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{t.name}</div>
+                  <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 20, color: '#555', marginTop: 4 }}>{t.role}</div>
                 </div>
               </div>
             ))}
           </div>
-          <a
-            href="https://calendly.com/improvycorazon/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btnRedSolidInk}
-          >
-            Book a Discovery Call
+        </div>
+      </section>
+
+      {/* CTA BANNER */}
+      <section style={{ background: '#0A0A0A', padding: '100px 24px', textAlign: 'center', borderTop: '1px solid #1A1A1A' }}>
+        <div style={{ maxWidth: 700, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 4vw, 52px)', fontWeight: 700, color: '#FAF7F2', lineHeight: 1.15, marginBottom: 24 }}>Ready to bring this to your team?</h2>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 19, color: 'rgba(253,250,246,0.62)', lineHeight: 1.6, marginBottom: 48 }}>Let's talk about what your people actually need — and build something that addresses the root.</p>
+          <a href="https://calendly.com/improvycorazon/30min" target="_blank" rel="noopener noreferrer" style={{ background: '#C0392B', color: '#FAF7F2', padding: '18px 44px', fontFamily: "'Inter', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
+            Book a Free Discovery Call
           </a>
         </div>
       </section>
-
-      {/* ── 6. ABOUT SYDLONNA ── */}
-      <section className={styles.about}>
-        <div className={styles.aboutInner}>
-          <p className={styles.aboutEyebrow}>The Person Behind This</p>
-          <blockquote className={styles.aboutQuote}>
-            "I spent years teaching people to take risks before realizing
-            I was going to have to take one myself."
-          </blockquote>
-          <p className={styles.aboutBody}>
-            Sydlonna Burks is a theatre educator turned presence trainer working across
-            Tampa Bay and beyond. She builds things like this because she's seen what
-            happens when people learn to stop performing and start actually showing up —
-            to their students, their teams, and themselves.
-          </p>
-          <Link to="/about" className={styles.btnOutlineDark}>
-            Full Story →
-          </Link>
-        </div>
-      </section>
-
-      {/* ── 7. NEWSLETTER ── */}
-      <section className={styles.newsletter}>
-        <div className={styles.newsletterInner}>
-          <p className={styles.newsletterEyebrow}>Stay in the Experiment</p>
-          <h2 className={styles.newsletterHeadline}>
-            This work is ongoing.<br />So is this conversation.
-          </h2>
-          <p className={styles.newsletterBody}>
-            Occasional writing, resources, and invitations for people who are curious
-            about presence, play, and what it means to lead from a place of genuine
-            availability. No curriculum. No 5-step frameworks. Just honest exploration.
-          </p>
-
-          {/* Replace this block with your Mailchimp / ConvertKit embed code */}
-          <form className={styles.signupForm} onSubmit={e => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className={styles.signupInput}
-              aria-label="Email address"
-              required
-            />
-            <button type="submit" className={styles.signupBtn}>
-              I'm In
-            </button>
-          </form>
-          {/* End email form placeholder */}
-
-          <p className={styles.signupNote}>
-            No spam. Unsubscribe whenever. This is a community, not a funnel.
-          </p>
-        </div>
-      </section>
-
-    </div>
+    </>
   )
 }

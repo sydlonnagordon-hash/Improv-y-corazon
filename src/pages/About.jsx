@@ -24,9 +24,7 @@ export default function About() {
       <section className={styles.story}>
         <div className={styles.storyInner}>
           <div className={styles.headshotBox}>
-            <div className={styles.headshotPlaceholder}>
-              <span className={styles.headshotNote}>Headshot Photo<br />Coming Soon</span>
-            </div>
+            <img src="/headshot.jpg" alt="Sydlonna Burks" style={{width: "100%", height: "100%", objectFit: "cover"}} />
           </div>
           <div className={styles.storyText}>
             <p className={styles.storyEyebrow}>Sydlonna Burks</p>
@@ -35,23 +33,23 @@ export default function About() {
               I was going to have to take one myself."
             </blockquote>
             <h2 className={styles.storyHeadline}>
-              Theatre educator. Presence trainer. Recovering perfectionist.
+              Adult social emotional learning expert. Culture change facilitator. Recovering perfectionist.
             </h2>
             <p className={styles.storyBody}>
-              Sydlonna spent years in classrooms and on stages — watching talented,
-              caring people freeze, disconnect, or perform a version of themselves
-              when things got hard. The training they'd received taught them what to do.
-              Nobody had taught them how to stay.
+              Sydlonna Burks spent 20+ years in classrooms, nonprofits, and training rooms watching talented,
+              caring people freeze, shut down, or perform a version of themselves when things got hard.
+              The professional development they received taught them what to do.
+              Nobody taught them how to stay present while doing it.
             </p>
             <p className={styles.storyBody}>
               Through her background in theatre, improvisation, and somatic learning,
-              she developed what became the Corazón Presence Method — a framework for
-              training the internal capacities that allow leaders to stay connected and
-              effective even when the stakes are highest.
+              she developed the Corazón Presence Method — a presence framework built for workforce programs
+              and the teams who lead them. It doesn't just teach skills.
+              It changes how people show up.
             </p>
             <p className={styles.storyBody}>
-              Today she works with youth mentor organizations, nonprofit teams, and
-              workforce readiness programs across Tampa Bay and beyond. And she wrote
+              Today she works with executive directors, HR leaders, and frontline teams across Tampa Bay
+              and beyond — helping organizations build cultures where people actually want to stay. And she wrote
               <em> Becoming the Fool</em> because she needed to say some things out loud
               that the workshops couldn't hold.
             </p>

@@ -10,7 +10,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 80px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 .logoImg {
-  height: 56px;
+  height: 140px;
   width: auto;
 }
 

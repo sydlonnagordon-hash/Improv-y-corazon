@@ -5,9 +5,9 @@ const programs = [
   {
     name: 'The Corazón Presence Method™',
     type: 'Flagship Program',
-    duration: '9 Weeks',
+    duration: '6 Weeks',
     format: 'Cohort-Based',
-    desc: 'Our full framework — three phases, nine weeks, and a complete transformation in how your team members show up. Designed for organizations ready to invest in lasting change.',
+    desc: 'Our full framework — three phases, six weeks, and a complete transformation in how your team members show up. Designed for organizations ready to invest in lasting change.',
     outcomes: ['4 Relational Energy training', 'Live training sessions', 'Field application', 'Integration coaching'],
     forWho: 'Leadership cohorts of 8–20 participants',
   },
@@ -88,28 +88,23 @@ export default function Programs() {
       {/* ── PILOT — black ── */}
       <section className={styles.pilot}>
         <div className={styles.pilotInner}>
-          <p className={styles.pilotEyebrow}>Live Pilot</p>
+          <p className={styles.pilotEyebrow}>Live Pilot Results</p>
           <h2 className={styles.pilotHeadline}>
             Elevate Tampa Bay
           </h2>
           <p className={styles.pilotBody}>
             In Spring 2026, Improv y Corazón piloted the Corazón Presence Method
             with Elevate Tampa Bay — a workforce readiness cohort supporting young
-            adults navigating career transitions. Full results, testimonials, and
-            video documentation coming Summer 2026.
+            adults navigating career transitions. Here's what happened.
           </p>
           <div className={styles.pilotGrid}>
             <div className={styles.pilotBox}>
               <p className={styles.pilotBoxLabel}>Video Documentation</p>
-              <p className={styles.pilotBoxNote}>Summer 2026</p>
-            </div>
-            <div className={styles.pilotBox}>
-              <p className={styles.pilotBoxLabel}>Participant Testimonials</p>
-              <p className={styles.pilotBoxNote}>Summer 2026</p>
+              <p className={styles.pilotBoxNote}>Coming Soon</p>
             </div>
             <div className={styles.pilotBox}>
               <p className={styles.pilotBoxLabel}>Impact Report</p>
-              <p className={styles.pilotBoxNote}>Summer 2026</p>
+              <a href="mailto:sydlonna@improvycorazon.com?subject=Impact Report Request" className={styles.pilotBoxNote} style={{color:'#C0392B', textDecoration:'none', fontWeight:600}}>Request the Report →</a>
             </div>
           </div>
         </div>
