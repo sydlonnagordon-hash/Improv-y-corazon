@@ -113,6 +113,28 @@
   margin-bottom: 48px;
 }
 
+/* ── BOOK COVER ── */
+.bookCoverLink {
+  display: block;
+  flex-shrink: 0;
+  line-height: 0;
+}
+.bookCoverImg {
+  width: 160px;
+  height: auto;
+  display: block;
+  box-shadow:
+    4px 8px 28px rgba(0,0,0,0.6),
+    1px 2px 6px rgba(0,0,0,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bookCoverLink:hover .bookCoverImg {
+  transform: translateY(-3px);
+  box-shadow:
+    6px 14px 36px rgba(0,0,0,0.65),
+    2px 4px 10px rgba(0,0,0,0.35);
+}
+
 /* ── BUY CARD ── */
 .buyCard {
   display: flex;
@@ -216,5 +238,7 @@
     align-items: flex-start;
     padding: 28px 24px;
   }
+  .bookCoverLink { align-self: center; margin-bottom: 8px; }
+  .bookCoverImg { width: 140px; }
   .buyBtn { width: 100%; text-align: center; }
 }

@@ -51,6 +51,18 @@ export default function Book() {
           </p>
 
           <div className={styles.buyCard}>
+            <a
+              href="https://buy.stripe.com/9B67sN5WkeOicRDcDz2Fa05"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.bookCoverLink}
+            >
+              <img
+                src="/book-cover.jpg"
+                alt="Becoming the Fool — book cover"
+                className={styles.bookCoverImg}
+              />
+            </a>
             <div className={styles.buyCardDetails}>
               <p className={styles.buyCardTitle}>Becoming the Fool</p>
               <p className={styles.buyCardFormat}>Print · Paperback</p>
