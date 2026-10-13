@@ -22,7 +22,7 @@ export default function Home() {
       <section style={{ minHeight: '92vh', background: '#0A0A0A', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 24px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: '#C0392B' }} />
         <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 28 }}>
-          6-Week Presence Training for Mission-Driven Organizations
+          6-Week Presence Training for Workforce Development Programs
         </div>
         <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 6vw, 76px)', fontWeight: 900, color: '#FAF7F2', lineHeight: 1.1, maxWidth: 900, marginBottom: 32, letterSpacing: '-0.02em' }}>
           Your training, guaranteed to land.
