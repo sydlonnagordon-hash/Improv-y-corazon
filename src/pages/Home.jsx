@@ -42,8 +42,7 @@ export default function Home() {
       <section style={{ background: '#FAF7F2', padding: '100px 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C0392B', marginBottom: 20, textAlign: 'center' }}>The Problem We Solve</div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, color: '#0A0A0A', textAlign: 'center', maxWidth: 700, margin: '0 auto 24px', lineHeight: 1.15 }}>Most trainings teach skills.<br />We reveal the beliefs beneath them.</h2>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 19, color: '#444', textAlign: 'center', maxWidth: 600, margin: '0 auto 72px', lineHeight: 1.6 }}>Organizations buy communication training because they think they have a communication problem. What they actually have is a presence problem.</p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, color: '#0A0A0A', textAlign: 'center', maxWidth: 700, margin: '0 auto 72px', lineHeight: 1.15 }}>Organizations buy communication training because they think they have a communication problem.<br />What they actually have is a presence problem.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
             {[
               { number: '01', title: 'Self-Awareness', desc: "Staff learn to recognize their own patterns under pressure — before those patterns damage relationships and derail the work." },
