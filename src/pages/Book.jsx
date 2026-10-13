@@ -58,7 +58,7 @@ export default function Book() {
               className={styles.bookCoverLink}
             >
               <img
-                src="/book-cover.png"
+                src="/book-cover.jpg"
                 alt="Becoming the Fool — book cover"
                 className={styles.bookCoverImg}
               />
