@@ -145,7 +145,7 @@ export default function Contact() {
                     onChange={handleChange}
                   >
                     <option value="">Select an option</option>
-                    <option value="flagship">The Corazón Presence Method (9-Week)</option>
+                    <option value="flagship">The Corazón Presence Method (6-Week)</option>
                     <option value="workshop">Presence Under Pressure Workshop</option>
                     <option value="coaching">1:1 Leadership Coaching</option>
                     <option value="youth">Elevate: Youth Mentor Edition</option>

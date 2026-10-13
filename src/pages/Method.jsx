@@ -28,7 +28,7 @@ const phases = [
   {
     number: '01',
     name: 'Live Training',
-    duration: 'Weeks 1–3',
+    duration: 'Weeks 1–2',
     desc: 'Immersive, facilitated sessions using structured improvisation to surface how participants actually respond under pressure — not how they think they do. Participants develop awareness and begin building new patterns in real time.',
     bullets: [
       'Group sessions (4–6 hours each)',
@@ -40,7 +40,7 @@ const phases = [
   {
     number: '02',
     name: 'Field Application',
-    duration: 'Weeks 4–6',
+    duration: 'Weeks 3–4',
     desc: 'Participants take their learning into their real work environment, applying specific practices and tracking their responses. Coaching check-ins provide support and course-correction.',
     bullets: [
       'Structured practice assignments',
@@ -52,7 +52,7 @@ const phases = [
   {
     number: '03',
     name: 'Integration & Sustainability',
-    duration: 'Weeks 7–9',
+    duration: 'Weeks 5–6',
     desc: 'The final phase ensures that new capacities become habits, not experiments. Teams build shared language and peer accountability structures that sustain growth long after the program ends.',
     bullets: [
       'Peer accountability circles',
@@ -129,7 +129,7 @@ export default function Method() {
       <section className={styles.phases}>
         <div className={styles.phasesInner}>
           <p className={styles.phasesEyebrow}>How It Works</p>
-          <h2 className={styles.phasesHeadline}>3 Phases. 9 Weeks. Real Change.</h2>
+          <h2 className={styles.phasesHeadline}>3 Phases. 6 Weeks. Real Change.</h2>
           <div className={styles.phaseList}>
             {phases.map(({ number, name, duration, desc, bullets }) => (
               <div key={number} className={styles.phaseItem}>
